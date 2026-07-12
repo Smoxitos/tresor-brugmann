@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.local
+*.log
+.DS_Store
+.vscode/
+
+# Fichiers sources déjà convertis dans public/images/
+carte-brugmann.png.jpeg
+equipe.png
