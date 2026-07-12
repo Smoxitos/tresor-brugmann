@@ -46,8 +46,13 @@ export function RiddleModal({ riddle, onClose, onSuccess }: RiddleModalProps) {
       return;
     }
 
+    const selectedChoiceData = riddle.choices.find(
+      (choice) => choice.id === selectedChoice,
+    );
     const randomIndex = Math.floor(Math.random() * gameData.encouragements.length);
-    setErrorMessage(gameData.encouragements[randomIndex]);
+    setErrorMessage(
+      selectedChoiceData?.incorrectFeedback ?? gameData.encouragements[randomIndex],
+    );
     setStatus('error');
   };
 

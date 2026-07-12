@@ -9,6 +9,7 @@ export interface MapPosition {
 export interface Choice {
   id: ChoiceId;
   label: string;
+  incorrectFeedback?: string;
 }
 
 export interface Riddle {
@@ -108,18 +109,34 @@ export const gameData = {
       id: 2,
       type: 'QCM',
       location: 'Parc du Cinquantenaire',
-      title: 'La grande question salariale',
-      question: 'Combien gagnent les biologistes ?',
-      choices: choices([
-        '3 000 € par mois',
-        '5 000 € par mois',
-        '10 000 € par mois',
-        'Pas assez',
-      ]),
-      correctChoiceIds: ['D'],
-      hint: 'Aucun chiffre ne semble vraiment satisfaisant…',
+      title: 'La pause gourmande',
+      question: 'Que prendre au secrétariat après un bon repas de midi ?',
+      choices: [
+        {
+          id: 'A',
+          label: 'Du café',
+          incorrectFeedback: 'Attention aux tachycardies !',
+        },
+        {
+          id: 'B',
+          label: 'Une madeleine',
+          incorrectFeedback: 'Une seule ?!',
+        },
+        {
+          id: 'C',
+          label: 'Plusieurs madeleines',
+        },
+        {
+          id: 'D',
+          label: 'Des jours de congé',
+          incorrectFeedback:
+            'Il n’y a plus de jours de congé disponibles pour cette année, désolé !',
+        },
+      ],
+      correctChoiceIds: ['C'],
+      hint: 'Après un bon repas, une seule douceur ne suffit jamais…',
       successMessage:
-        'Bonne réponse ! Après des années d’études, des gardes et des validations, la réponse reste toujours la même : pas assez.',
+        'Exactement ! Après un bon repas de midi, plusieurs madeleines sont indispensables pour reprendre des forces.',
       position: { x: 59.7, y: 46.8 },
     },
     {

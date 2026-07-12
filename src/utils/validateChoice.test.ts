@@ -15,13 +15,29 @@ describe('validateChoice', () => {
     ]);
   });
 
-  it('n’accepte que D au niveau 2', () => {
+  it('n’accepte que C au niveau 2', () => {
     const level = gameData.levels[1];
     expect(allChoices.map((choice) => validateChoice(level, choice))).toEqual([
       false,
       false,
-      false,
       true,
+      false,
+    ]);
+  });
+
+  it('associe le bon message aux mauvaises réponses du niveau 2', () => {
+    const level = gameData.levels[1];
+    expect(level.choices.map((choice) => [
+      choice.label,
+      'incorrectFeedback' in choice ? choice.incorrectFeedback : undefined,
+    ])).toEqual([
+      ['Du café', 'Attention aux tachycardies !'],
+      ['Une madeleine', 'Une seule ?!'],
+      ['Plusieurs madeleines', undefined],
+      [
+        'Des jours de congé',
+        'Il n’y a plus de jours de congé disponibles pour cette année, désolé !',
+      ],
     ]);
   });
 
