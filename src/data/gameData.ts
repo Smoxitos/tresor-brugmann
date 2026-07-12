@@ -209,6 +209,6 @@ export const gameData = {
       'Même si une nouvelle aventure t’attend au Liban, une partie de toi restera toujours avec nous à Brugmann. Nous te souhaitons beaucoup de réussite, de bonheur et de belles découvertes pour la suite.',
     signoff: 'Bon voyage et à bientôt ! 🇧🇪 ❤️ 🇱🇧',
     lastMessage:
-      'Merci pour tous les moments partagés, les discussions, les rires et ton travail avec nous. Cette carte représente le chemin jusqu’à Brugmann, mais surtout tous les souvenirs que tu emportes avec toi.',
+      'Un grand merci pour ton travail, ton implication, ta bonne humeur et tous les bons moments partagés. Nous te souhaitons beaucoup de réussite et de bonheur dans ta nouvelle aventure, ainsi que de belles rencontres et des collègues sympas. En tout cas, nous sommes certains qu’ils comprendront très vite la chance qu’ils ont de compter parmi eux un véritable trésor. Nous te souhaitons le meilleur pour la suite.',
   },
 } as const satisfies GameConfig;
