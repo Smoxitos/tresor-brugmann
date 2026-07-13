@@ -1433,12 +1433,10 @@ button.treasure-chest {
 }
 
 .team-photo-frame img {
+  display: block;
   width: 100%;
-  max-height: 52vh;
-  min-height: 250px;
-  object-fit: contain;
+  height: auto;
   border: 1px solid #d6c39f;
-  background: #ece0c6;
 }
 
 .team-photo-placeholder {
